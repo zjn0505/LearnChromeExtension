@@ -1,0 +1,23 @@
+body {
+	font - family : "Segoe UI",
+	"Lucida Grande",
+	Tahoma,
+	sans - serif;
+	font - size : 100 % ;
+}
+
+#url {
+	/* avoid an excessively wide status text */
+	white - space : pre;
+	text - overflow : ellipsis;
+	overflow : hidden;
+	max - width : 400px;
+}
+
+#qrcode {
+	width : 160px;
+	height : 160px;
+	margin : auto;
+	margin-top : 15px;
+	margin-left : 20px;
+}

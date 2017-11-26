@@ -39,14 +39,21 @@ function getCurrentTabUrl(callback) {
 	
 document.addEventListener('DOMContentLoaded', function() {
   getCurrentTabUrl(function(url) {
-	makeCode(url);
-	
-	document.getElementById('url').value = url;
+  	makeCode(url);
+  	
+  	document.getElementById('url').value = url;
+    document.getElementById('gen').addEventListener('click', () => {
+      var div = document.getElementById('qrcode');
+      while(div.firstChild) {
+        div.removeChild(div.firstChild);
+      }
+      makeCode(document.getElementById('url').value);
+    });
   });
 });
 
-function makeCode(url) {      
-    new QRCode(document.getElementById("qrcode"), {
+function makeCode(url) {
+    new QRCode(document.getElementById('qrcode'), {
 		text: url,
 		width: 128,
 		height: 128,

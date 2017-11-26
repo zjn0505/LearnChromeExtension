@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name": "Baidu在线",
+	"version": "1.0",
+	"description": "Baidu是否连得上呢",
+	"icons": {
+		"16": "images/icon16.png",
+		"48": "images/icon48.png"
+	},
+	"browser_action": {
+		"default_icon": {
+			"19": "images/icon19.png",
+			"38": "images/icon38.png"
+		}
+	},
+	"background": {
+		"scripts": [
+			"js/status.js"
+		]
+	},
+	"homepage_url": "https://jienan.xyz",
+	"permissions": [
+		"https://www.baidu.com/"
+	]
+}
